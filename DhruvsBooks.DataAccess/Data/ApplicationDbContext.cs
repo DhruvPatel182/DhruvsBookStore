@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using DhruvsBooks.Models;
 namespace DhruvsBookStore.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
@@ -11,6 +11,7 @@ namespace DhruvsBookStore.DataAccess.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-        }
+        }   
+        public DbSet<Category> Categories { get; set; }
     }
 }
